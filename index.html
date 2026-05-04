@@ -1,100 +1,221 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Qiuyu Lian</title>
-    <meta charset="utf-8">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: auto;
-            line-height: 1.6;
-            padding: 20px;
-        }
-        h1, h2, h3 {
-            color: #2c3e50;
-        }
-        a {
-            color: #1a73e8;
-            text-decoration: none;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Qiuyu Lian</title>
+
+  <style>
+    :root {
+      --cambridge-blue: #A3C1AD;
+      --cambridge-dark: #1F3D35;
+      --cambridge-deep: #0E2A24;
+      --text: #263238;
+      --muted: #5f6f6a;
+      --border: #d8e3dc;
+      --background: #f8fbf9;
+      --white: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    .page {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+
+    .profile-card {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 6px solid var(--cambridge-blue);
+      border-radius: 18px;
+      padding: 32px;
+      box-shadow: 0 8px 24px rgba(14, 42, 36, 0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .profile-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(14, 42, 36, 0.16);
+    }
+
+    .profile-photo {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid var(--cambridge-blue);
+      flex-shrink: 0;
+    }
+
+    h1 {
+      margin: 0 0 8px 0;
+      color: var(--cambridge-deep);
+      font-size: 2.4rem;
+      line-height: 1.15;
+    }
+
+    .tagline {
+      color: var(--cambridge-dark);
+      font-size: 1.05rem;
+      margin: 8px 0 18px 0;
+      font-style: italic;
+    }
+
+    .affiliation {
+      margin: 0 0 12px 0;
+      color: var(--muted);
+    }
+
+    a {
+      color: var(--cambridge-dark);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid var(--cambridge-blue);
+    }
+
+    a:hover {
+      color: var(--cambridge-deep);
+      border-bottom-color: var(--cambridge-deep);
+    }
+
+    section {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-top: 28px;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--cambridge-deep);
+      border-bottom: 2px solid var(--cambridge-blue);
+      padding-bottom: 8px;
+    }
+
+    h3 {
+      color: var(--cambridge-dark);
+      margin-bottom: 8px;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    @media (max-width: 700px) {
+      .page {
+        padding: 24px 16px;
+      }
+
+      .profile-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 28px 20px;
+      }
+
+      .profile-photo {
+        width: 150px;
+        height: 150px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      section {
+        padding: 24px 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <main class="page">
 
-<h1>Qiuyu Lian</h1>
+    <header class="profile-card">
+      <img src="photo.jpeg" alt="Qiuyu Lian" class="profile-photo">
 
-<img src="photo.png" alt="Qiuyu Lian" width="180" style="border-radius: 10px;">
-  
-<p>
-Assistant Research Professor <br>
-Gurdon Institute & DAMTP <br>
-University of Cambridge
-</p>
+      <div>
+        <h1>Qiuyu Lian</h1>
 
-<p>
-<strong>Email:</strong> ql333@cam.ac.uk
-</p>
+        <p class="tagline">
+          Understanding cell fate through AI, topology, and dynamical systems
+        </p>
 
-<hr>
+        <p class="affiliation">
+          Assistant Research Professor<br>
+          Gurdon Institute &amp; DAMTP<br>
+          University of Cambridge
+        </p>
 
-<h2>About Me</h2>
+        <p>
+          <strong>Email:</strong> <a href="mailto:ql333@cam.ac.uk">ql333@cam.ac.uk</a><br>
+          <strong>Google Scholar:</strong>
+          <a href="https://scholar.google.com/citations?user=sfD9B58AAAAJ&hl=en&oi=ao" target="_blank">
+            Profile
+          </a>
+        </p>
+      </div>
+    </header>
 
-<p>
-I am an Assistant Research Professor at the University of Cambridge, working at the interface of 
-<strong>artificial intelligence, mathematics, and biology</strong>.
-</p>
+    <section>
+      <h2>About Me</h2>
 
-<p>
-My research focuses on developing <strong>AI-driven and mathematically principled models</strong> to understand how cell states evolve from high-dimensional molecular data.
-</p>
+      <p>
+        I am an Assistant Research Professor at the University of Cambridge, working at the interface of
+        <strong>artificial intelligence, mathematics, and biology</strong>.
+      </p>
 
-<p>
-I study these processes in the context of:
-</p>
+      <p>
+        My research focuses on developing <strong>AI-driven and mathematically principled models</strong>
+        to understand how cell states evolve from high-dimensional molecular data.
+      </p>
 
-<ul>
-<li>Stem cell fate decisions</li>
-<li>Development</li>
-<li>Tissue repair</li>
-<li>Cancer</li>
-<li>Ageing</li>
-</ul>
+      <p>I study these processes in the context of:</p>
 
-<hr>
+      <ul>
+        <li>Stem cell fate decisions</li>
+        <li>Development</li>
+        <li>Tissue repair</li>
+        <li>Cancer</li>
+        <li>Ageing</li>
+      </ul>
+    </section>
 
-<h2>Research</h2>
+    <section>
+      <h2>Research</h2>
 
-<h3>AI and Topological Modelling of Cell Fate Dynamics</h3>
+      <h3>AI and Topological Modelling of Cell Fate Dynamics</h3>
 
-<p>
-My research aims to understand how cells make decisions over time, and how these processes are altered in disease.
-</p>
+      <p>
+        My research aims to understand how cells make decisions over time, and how these processes are altered in disease.
+      </p>
 
-<ul>
-<li>Neural ODEs and dynamical systems for modelling trajectories</li>
-<li>Topological data analysis (persistent homology, circular coordinates)</li>
-<li>Single-cell and spatial omics data</li>
-</ul>
+      <ul>
+        <li>Neural ODEs and dynamical systems for modelling trajectories</li>
+        <li>Topological data analysis, including persistent homology and circular coordinates</li>
+        <li>Single-cell and spatial omics data</li>
+      </ul>
 
-<h3>Long-term Vision</h3>
+      <h3>Long-term Vision</h3>
 
-<p>
-To build a predictive and mechanistic framework of cell fate, enabling identification of key regulators, understanding disease progression, and discovery of therapeutic targets.
-</p>
+      <p>
+        To build a predictive and mechanistic framework of cell fate, enabling identification of key regulators,
+        understanding of disease progression, and discovery of therapeutic targets.
+      </p>
+    </section>
 
-<hr>
-
-<h2>Links</h2>
-
-<ul>
-<li>
-<a href="https://scholar.google.com/citations?user=sfD9B58AAAAJ&hl=en&oi=ao" target="_blank">
-Google Scholar
-</a>
-</li>
-</ul>
-
+  </main>
 </body>
 </html>
