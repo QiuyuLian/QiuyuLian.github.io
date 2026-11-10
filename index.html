@@ -32,7 +32,7 @@
     .hero::after { content: ""; position: absolute; width: 560px; height: 560px; right: -160px; top: -250px; border: 1px solid rgba(255,255,255,.13); border-radius: 50%; box-shadow: 0 0 0 55px rgba(255,255,255,.025),0 0 0 110px rgba(255,255,255,.025); pointer-events: none; }
     .hero-inner { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0,1.8fr) minmax(190px,.55fr); align-items: center; gap: 48px; padding-top: 58px; padding-bottom: 62px; }
     .eyebrow { margin: 0 0 17px; color: #c9d9ce; font-size: .76rem; font-weight: 750; letter-spacing: .18em; text-transform: uppercase; }
-    h1 { margin: 0; max-width: 980px; color: var(--white); font-family: Georgia,"Times New Roman",serif; font-size: clamp(2.55rem,5.25vw,4.75rem); font-weight: 500; letter-spacing: -.045em; line-height: 1.04; }
+    h1 { margin: 0; max-width: 1050px; color: var(--white); font-family: Georgia,"Times New Roman",serif; font-size: clamp(2.35rem,4.6vw,4.1rem); font-weight: 500; letter-spacing: -.04em; line-height: 1.08; }
     .hero-subtitle { max-width: 900px; margin: 20px 0 0; color: #e0e9e3; font-size: clamp(1.08rem,2vw,1.35rem); line-height: 1.55; }
     .hero-meta { margin-top: 20px; color: #c5d5cb; font-size: .94rem; }
     .hero-meta strong { color: var(--white); font-weight: 650; }
@@ -65,7 +65,7 @@
     .join-intro { display: flex; align-items: flex-start; justify-content: space-between; gap: 28px; margin-bottom: 34px; }
     .recruiting-label { display: inline-flex; align-items: center; gap: 9px; white-space: nowrap; padding: 8px 12px; color: #245b40; background: #e6f2e9; border: 1px solid #c9e2d0; border-radius: 3px; font-size: .78rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
     .recruiting-label::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #3e9860; }
-    .opportunities { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; }
+    .opportunities { display: grid; grid-template-columns: 1fr; gap: 20px; }
     .opportunity { padding: 28px; background: var(--white); border: 1px solid var(--line); box-shadow: 0 8px 26px rgba(16,45,37,.045); }
     .opportunity.featured { border-top: 4px solid var(--green-700); }
     .opportunity h3 { margin: 0 0 12px; color: var(--green-900); font-size: 1.22rem; }
@@ -80,7 +80,7 @@
     .fellowship-group li { margin: 7px 0; }
     .fellowship-group a { font-weight: 750; }
     .fellowship-note { margin-top: 20px !important; padding-top: 15px; border-top: 1px solid var(--line); font-size: .9rem; }
-    .wide-opportunity { grid-column: 1 / -1; }
+    .wide-opportunity { grid-column: auto; }
     .candidate-box { margin-top: 30px; padding: 29px 31px; color: #eaf1ec; background: var(--green-900); }
     .candidate-box h3 { margin: 0 0 12px; color: var(--white); font-size: 1.2rem; }
     .candidate-box p { margin: 0 0 12px; color: #d2dfd6; }
@@ -195,7 +195,8 @@
         </div>
         <div class="opportunities">
           <article class="opportunity featured">
-            <h3>Funded postdoctoral position</h3>
+            <h3>Current openings</h3>
+            <h4>Funded postdoctoral position</h4>
             <p>We have funding available to support one postdoctoral researcher to join Lian Lab at the University of Cambridge. The position is currently being prepared and will be formally advertised shortly.</p>
             <p>We welcome informal enquiries from interested candidates in advance of the formal advertisement. The successful candidate will develop and apply AI-driven dynamical models to understand cell fate decisions, cellular plasticity and tissue dynamics, integrating computational modelling with single-cell and spatial omics data.</p>
             <p>If you have experience in machine learning, mathematical modelling, computational biology, bioinformatics or a related quantitative discipline, and are excited by fundamental biological questions, please feel free to get in touch.</p>
@@ -209,44 +210,43 @@
             <p>The studentship is part of a competitive doctoral training programme. Please consult the programme website for the full details of funding, eligibility, required documents and the application process.</p>
             <a class="text-link" href="https://crukcambridgecentre.org.uk/studentships" target="_blank" rel="noopener noreferrer">Programme details and application instructions →</a>
           </article>
-          <article class="opportunity wide-opportunity">
+          <article class="opportunity">
             <h3>Postdoctoral fellowships and external funding</h3>
-            <p>We welcome enquiries from prospective postdoctoral researchers interested in developing a fellowship application with Lian Lab. We are happy to discuss research ideas, help identify suitable schemes and jointly develop proposals. The opportunities below are examples of schemes that may support research at the interface of AI, quantitative modelling and the life sciences. Eligibility, host requirements and funding scope vary between schemes and individual calls.</p>
+            <p>We welcome enquiries from prospective postdoctoral researchers interested in jointly developing fellowship applications with Lian Lab. Please see examples of relevant funding schemes below; eligibility and mobility requirements vary.</p>
             <div class="fellowship-groups">
               <div class="fellowship-group">
-                <h4>UK-based and Cambridge-hosted opportunities</h4>
+                <h4>UK-based and Cambridge-hosted</h4>
                 <ul>
-                  <li><a href="https://www.herchelsmith.cam.ac.uk/postdoctoral-fellowships" target="_blank" rel="noopener noreferrer">Herchel Smith Postdoctoral Fellowships</a> – Cambridge-based awards in biological and physical sciences; eligible subject areas rotate between calls.</li>
-                  <li><a href="https://royalcommission1851.org/fellowships/research-fellowships" target="_blank" rel="noopener noreferrer">Royal Commission for the Exhibition of 1851 Research Fellowships</a> – a particularly relevant option for early-career researchers in biological sciences, mathematics, applied science and engineering; normally for recent PhD graduates.</li>
-                  <li><a href="https://www.ukri.org/opportunity/?keywords=BBSRC%20Discovery%20Fellowship" target="_blank" rel="noopener noreferrer">BBSRC Discovery Fellowships</a> – for researchers developing an independent research programme in the biosciences.</li>
-                  <li><a href="https://wellcome.org/research-funding/schemes/wellcome-early-career-awards" target="_blank" rel="noopener noreferrer">Wellcome Early-Career Awards</a> – supports researchers developing an independent, health-related research programme, including methodological innovation.</li>
+                  <li><a href="https://www.herchelsmith.cam.ac.uk/postdoctoral-fellowships" target="_blank" rel="noopener noreferrer">Herchel Smith Postdoctoral Fellowships</a></li>
+                  <li><a href="https://royalcommission1851.org/fellowships/research-fellowships" target="_blank" rel="noopener noreferrer">Royal Commission for the Exhibition of 1851 Research Fellowships</a></li>
+                  <li><a href="https://www.ukri.org/opportunity/?keywords=BBSRC%20Discovery%20Fellowship" target="_blank" rel="noopener noreferrer">BBSRC Discovery Fellowships</a></li>
+                  <li><a href="https://wellcome.org/research-funding/schemes/wellcome-early-career-awards" target="_blank" rel="noopener noreferrer">Wellcome Early-Career Awards</a></li>
                 </ul>
               </div>
               <div class="fellowship-group">
                 <h4>International and mobility fellowships</h4>
                 <ul>
-                  <li><a href="https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships" target="_blank" rel="noopener noreferrer">Marie Skłodowska-Curie Postdoctoral Fellowships (MSCA-PF)</a> – European fellowships can be held in the UK; applicants must meet the international mobility rule.</li>
-                  <li><a href="https://www.embo.org/funding/fellowships-grants-and-career-support/postdoctoral-fellowships/" target="_blank" rel="noopener noreferrer">EMBO Postdoctoral Fellowships</a> – for internationally mobile researchers working in the life sciences; specific PhD-age, publication and mobility criteria apply.</li>
-                  <li><a href="https://www.hfsp.org/funding/hfsp-funding/postdoctoral-fellowships" target="_blank" rel="noopener noreferrer">HFSP Postdoctoral Fellowships</a> – especially relevant to interdisciplinary transitions, including researchers moving from mathematics, physics, engineering or computer science into life sciences.</li>
-                  <li><a href="https://www.royalsociety.org/grants/newton-international/" target="_blank" rel="noopener noreferrer">Newton International Fellowships</a> – for eligible early-career researchers based outside the UK who wish to undertake research in the UK.</li>
+                  <li><a href="https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships" target="_blank" rel="noopener noreferrer">Marie Skłodowska-Curie Postdoctoral Fellowships (MSCA-PF)</a></li>
+                  <li><a href="https://www.embo.org/funding/fellowships-grants-and-career-support/postdoctoral-fellowships/" target="_blank" rel="noopener noreferrer">EMBO Postdoctoral Fellowships</a></li>
+                  <li><a href="https://www.hfsp.org/funding/hfsp-funding/postdoctoral-fellowships" target="_blank" rel="noopener noreferrer">HFSP Postdoctoral Fellowships</a></li>
+                  <li><a href="https://www.royalsociety.org/grants/newton-international/" target="_blank" rel="noopener noreferrer">Newton International Fellowships</a></li>
                 </ul>
               </div>
               <div class="fellowship-group">
-                <h4>Independent and exploratory research fellowships</h4>
+                <h4>Independent research fellowships</h4>
                 <ul>
-                  <li><a href="https://brancoweissfellowship.org/" target="_blank" rel="noopener noreferrer">Branco Weiss Fellowship</a> – for outstanding early-career researchers proposing bold projects that go beyond the mainstream; applicants must meet strict academic-independence and career-stage criteria.</li>
-                  <li><a href="https://royalsociety.org/grants/university-research/" target="_blank" rel="noopener noreferrer">Royal Society University Research Fellowship</a> – a longer-term route for researchers ready to establish an independent research career in the natural sciences.</li>
+                  <li><a href="https://brancoweissfellowship.org/" target="_blank" rel="noopener noreferrer">Branco Weiss Fellowship</a></li>
+                  <li><a href="https://royalsociety.org/grants/university-research/" target="_blank" rel="noopener noreferrer">Royal Society University Research Fellowship</a></li>
                 </ul>
               </div>
               <div class="fellowship-group">
-                <h4>Additional opportunities</h4>
+                <h4>Career-break returners</h4>
                 <ul>
-                  <li><a href="https://daphnejackson.org/about-fellowships/" target="_blank" rel="noopener noreferrer">Daphne Jackson Fellowships</a> – specifically for researchers returning to research after a career break for family, health or caring reasons.</li>
+                  <li><a href="https://daphnejackson.org/about-fellowships/" target="_blank" rel="noopener noreferrer">Daphne Jackson Fellowships</a></li>
                 </ul>
               </div>
             </div>
-            <p class="fellowship-note">These schemes are not universally suitable for every applicant. For example, EMBO, HFSP and MSCA have specific mobility requirements; Newton International Fellowships require applicants to be based outside the UK; and some schemes support independent research programmes rather than a conventional postdoctoral appointment. Please check the current funder guidance and contact us to discuss your eligibility and the best route for your circumstances.</p>
-            <p>We also welcome enquiries about national or international fellowship programmes in applicants' home countries. If you have a funding scheme in mind, please get in touch to discuss a potential project and joint application.</p>
+            <p class="fellowship-note">We also welcome enquiries about national and international fellowship schemes in applicants' home countries. Please contact us to discuss a potential project and joint application.</p>
           </article>
         </div>
         <div class="candidate-box">
