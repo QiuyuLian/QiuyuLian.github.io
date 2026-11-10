@@ -31,6 +31,7 @@
     .hero { position: relative; overflow: hidden; color: var(--white); background: linear-gradient(118deg,rgba(16,45,37,.98),rgba(23,60,50,.94) 58%,rgba(36,83,67,.91)); }
     .hero::after { content: ""; position: absolute; width: 560px; height: 560px; right: -160px; top: -250px; border: 1px solid rgba(255,255,255,.13); border-radius: 50%; box-shadow: 0 0 0 55px rgba(255,255,255,.025),0 0 0 110px rgba(255,255,255,.025); pointer-events: none; }
     .hero-inner { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0,1.8fr) minmax(190px,.55fr); align-items: center; gap: 48px; padding-top: 58px; padding-bottom: 62px; }
+    .nowrap { white-space: nowrap; }
     .eyebrow { margin: 0 0 17px; color: #c9d9ce; font-size: .76rem; font-weight: 750; letter-spacing: .18em; text-transform: uppercase; }
     h1 { margin: 0; max-width: 1050px; color: var(--white); font-family: Georgia,"Times New Roman",serif; font-size: clamp(2.35rem,4.6vw,4.1rem); font-weight: 500; letter-spacing: -.04em; line-height: 1.08; }
     .hero-subtitle { max-width: 900px; margin: 20px 0 0; color: #e0e9e3; font-size: clamp(1.08rem,2vw,1.35rem); line-height: 1.55; }
@@ -63,6 +64,8 @@
     .research-card h3 { margin: 18px 0 12px; color: var(--green-900); font-size: 1.17rem; line-height: 1.35; }
     .research-card p { margin: 0; color: var(--muted); font-size: .96rem; }
     .join-intro { display: flex; align-items: flex-start; justify-content: space-between; gap: 28px; margin-bottom: 34px; }
+    .join-intro .section-heading { flex: 1; max-width: none; }
+    .join-intro .lead { max-width: none; }
     .recruiting-label { display: inline-flex; align-items: center; gap: 9px; white-space: nowrap; padding: 8px 12px; color: #245b40; background: #e6f2e9; border: 1px solid #c9e2d0; border-radius: 3px; font-size: .78rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
     .recruiting-label::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #3e9860; }
     .opportunities { display: grid; grid-template-columns: 1fr; gap: 20px; }
@@ -112,6 +115,7 @@
       .nav-links a { flex-shrink: 0; font-size: .82rem; }
       .nav-links .nav-join { padding: 5px 10px; }
       .hero-inner { padding-top: 57px; padding-bottom: 60px; }
+      .nowrap { white-space: normal; }
       .hero-profile { gap: 15px; }
       .profile-photo { width: 88px; height: 88px; }
       .section { padding: 60px 0; }
@@ -141,7 +145,7 @@
       <div class="hero-inner wrap">
         <div>
           <p class="eyebrow">Computational Biology · University of Cambridge</p>
-          <h1>Understanding cell fate through AI and<br>dynamical systems</h1>
+          <h1>Understanding cell fate through AI<br><span class="nowrap">and dynamical systems</span></h1>
           <p class="hero-subtitle">We develop interpretable, AI-driven dynamical models to understand how cells make decisions, change identity and evolve during development and disease.</p>
           <p class="hero-meta"><strong>Lian Lab</strong> · Gurdon Institute &amp; Department of Applied Mathematics and Theoretical Physics</p>
           <div class="hero-actions">
@@ -205,7 +209,7 @@
             <h3>PhD studentship</h3>
             <span class="project-title">Interpretable AI for Modelling Early Cancer Evolution</span>
             <span class="deadline">Application deadline: 18 November 2026</span>
-            <p>This project is offered through the <strong>CRUK Cambridge Centre Studentships programme</strong> at the University of Cambridge. It will develop interpretable AI and dynamical modelling approaches to understand how early cancer evolves, how cells change state, and how interactions within the tissue microenvironment shape cancer initiation and progression.</p>
+            <p>This project is offered through the <strong>CRUK Cambridge Centre Studentships programme</strong> at the University of Cambridge and will be co-supervised with <a href="https://www.stemcells.cam.ac.uk/people/pi/simons" target="_blank" rel="noopener noreferrer">Professor Ben Simons</a>. Focusing on intestinal cancer, the project will use single-cell data to reconstruct early cancer evolution and develop interpretable AI and dynamical modelling approaches to understand how cellular states change and how interactions within the tissue microenvironment shape cancer initiation and progression.</p>
             <p>The project is suited to applicants interested in the interface of AI, quantitative modelling and cancer biology. Candidates from computational, mathematical, physical, engineering, bioinformatics or relevant biological backgrounds are welcome, provided they have a strong interest in computational approaches to biological questions.</p>
             <p>The studentship is part of a competitive doctoral training programme. Please consult the programme website for the full details of funding, eligibility, required documents and the application process.</p>
             <a class="text-link" href="https://crukcambridgecentre.org.uk/studentships" target="_blank" rel="noopener noreferrer">Programme details and application instructions →</a>
